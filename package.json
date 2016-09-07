@@ -1,0 +1,43 @@
+{
+  "name": "@matthewglover/hapi-oauth",
+  "version": "1.0.0",
+  "description": "Oauth login plugin for Hapi.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose './test/**/*.test.js'",
+    "precommit": "npm run lint && nyc --reporter=lcov npm test && npm run coverage",
+    "lint": "eslint './+(lib|util|test_helpers|test)/**/*.js'",
+    "coverage": "nyc check-coverage --lines 100, --functions 100, --branches 100"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewglover/hapi-oauth.git"
+  },
+  "keywords": [],
+  "author": "Matt Glover (https://github.com/matthewglover)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewglover/hapi-oauth/issues"
+  },
+  "homepage": "https://github.com/matthewglover/hapi-oauth#readme",
+  "devDependencies": {
+    "@matthewglover/hapi-wrapper": "^0.2.0",
+    "ava": "^0.16.0",
+    "babel-eslint": "^6.1.2",
+    "coveralls": "^2.11.12",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^6.2.0",
+    "husky": "^0.11.7",
+    "nock": "^8.0.0",
+    "nyc": "^8.1.0"
+  },
+  "dependencies": {
+    "hapi": "^15.0.3",
+    "jsonwebtoken": "^7.1.9",
+    "ramda": "^0.22.1",
+    "request": "^2.74.0"
+  }
+}
