@@ -6,8 +6,9 @@
   "scripts": {
     "test": "ava --verbose './test/**/*.test.js'",
     "precommit": "npm run lint && nyc --reporter=lcov npm test && npm run coverage",
-    "lint": "eslint './+(lib|util|test_helpers|test)/**/*.js'",
-    "coverage": "nyc check-coverage --lines 100, --functions 100, --branches 100"
+    "lint": "eslint './+(lib|util|test_helpers|test|integration)/**/*.js'",
+    "coverage": "nyc check-coverage --lines 100, --functions 100, --branches 100",
+    "integration": "node ./integration"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "ava": "^0.16.0",
     "babel-eslint": "^6.1.2",
     "coveralls": "^2.11.12",
+    "env2": "^2.1.1",
     "eslint": "^3.4.0",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-plugin-import": "^1.14.0",
@@ -32,7 +34,9 @@
     "eslint-plugin-react": "^6.2.0",
     "husky": "^0.11.7",
     "nock": "^8.0.0",
-    "nyc": "^8.1.0"
+    "nyc": "^8.1.0",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.5"
   },
   "dependencies": {
     "hapi": "^15.0.3",

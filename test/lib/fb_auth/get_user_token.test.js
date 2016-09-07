@@ -22,11 +22,11 @@ const qs = querystring.stringify({
 });
 
 nock('https://graph.facebook.com')
-  .get(`/v2.3/oauth/access_token?${qs}`)
+  .get(`/v2.7/oauth/access_token?${qs}`)
   .reply(200, USER_TOKEN);
 
 nock('https://graph.facebook.com')
-  .get(`/v2.3/oauth/access_token?${qs}`)
+  .get(`/v2.7/oauth/access_token?${qs}`)
   .replyWithError(AWFUL_ERROR);
 
 test.serial('returns a Promise which resolves to a user token object', async t => {

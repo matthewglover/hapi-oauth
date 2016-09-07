@@ -43,7 +43,7 @@ const payload = {
 };
 
 nock('https://graph.facebook.com')
-  .get(`/v2.3/oauth/access_token?${qs}`)
+  .get(`/v2.7/oauth/access_token?${qs}`)
   .reply(200, USER_TOKEN);
 
 nock('https://graph.facebook.com')

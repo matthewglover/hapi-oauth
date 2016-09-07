@@ -9,5 +9,5 @@ const server = plugins =>
   .then(registerPlugins(plugins));
 
 test('plugin loads without error', async t => {
-  t.true(await server([{ register: HapiOauth, options: [] }]) instanceof Hapi.Server);
+  t.true(await server([{ register: HapiOauth, options: { configs: [] } }]) instanceof Hapi.Server);
 });
