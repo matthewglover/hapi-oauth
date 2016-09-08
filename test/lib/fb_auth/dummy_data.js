@@ -14,8 +14,18 @@ const AWFUL_ERROR = {
   code: 'AWFUL_ERROR',
 };
 
+const AUTH_CONFIG = {
+  code: 'facebook-code',
+  loginPath: '/fb-login',
+  authPath: '/fb-auth',
+  baseUrl: 'localhost',
+  clientId: 'facebook-client-id',
+  clientSecret: 'facebook-secret',
+};
+
 module.exports = {
   USER_TOKEN,
   USER_DETAILS,
   AWFUL_ERROR,
+  AUTH_CONFIG,
 };

@@ -22,7 +22,7 @@ const plugin = {
   options: { configs },
 };
 
-const indexRoute = {
+const processJwtRoute = {
   method: 'GET',
   path: '/process-jwt',
   handler: (req, reply) => {
@@ -34,7 +34,7 @@ const server =
   createServer()
   .then(setConnection({ port: 3000 }))
   .then(registerPlugins([plugin]))
-  .then(addRoutes([indexRoute]))
+  .then(addRoutes([processJwtRoute]))
   .then(startServer)
   /* eslint-disable no-console */
   .then(s => console.log(`Server running at: ${s.info.uri}`))
