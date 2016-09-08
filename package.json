@@ -1,6 +1,6 @@
 {
   "name": "@matthewglover/hapi-oauth",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Oauth login plugin for Hapi.js",
   "main": "index.js",
   "scripts": {
