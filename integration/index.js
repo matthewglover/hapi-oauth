@@ -8,10 +8,13 @@ const configs = [
     provider: 'facebook',
     loginPath: '/fb-login',
     authPath: '/fb-auth',
-    redirectPath: '/process-jwt',
+    redirectPath: '/process-login',
     baseUrl: process.env.BASE_URL,
     clientId: process.env.FB_CLIENT_ID,
     clientSecret: process.env.FB_CLIENT_SECRET,
+    options: {
+      scope: 'user_likes',
+    },
   },
 ];
 
@@ -22,10 +25,8 @@ const plugin = {
 
 const processJwtRoute = {
   method: 'GET',
-  path: '/process-jwt',
-  handler: (req, reply) => {
-    reply(req.query.jwt);
-  },
+  path: '/process-login',
+  handler: (req, reply) => reply(req.query),
 };
 
 const server =
