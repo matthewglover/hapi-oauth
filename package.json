@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "hapi": "^15.0.3",
-    "jsonwebtoken": "^7.1.9",
     "ramda": "^0.22.1",
     "request": "^2.74.0"
   }
