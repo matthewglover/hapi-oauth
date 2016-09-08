@@ -2,7 +2,6 @@ require('env2')('./config.env');
 const { createServer, setConnection, registerPlugins, addRoutes, startServer } =
   require('@matthewglover/hapi-wrapper');
 const hapiOauth = require('../');
-const signJWT = require('../util/sign_jwt');
 
 const configs = [
   {
@@ -13,7 +12,6 @@ const configs = [
     baseUrl: process.env.BASE_URL,
     clientId: process.env.FB_CLIENT_ID,
     clientSecret: process.env.FB_CLIENT_SECRET,
-    generateToken: signJWT({ algorithm: 'HS256' }, 'my-secret-string'),
   },
 ];
 
