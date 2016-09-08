@@ -27,8 +27,8 @@ const options = {
       authPath: '/fb-auth',                       // path to complete login process
       redirectPath: '/process-login',             // path to handle any post-login
       baseUrl: 'your.domain.com',                 // base path of your domain (without)
-      clientId: process.env.FB_CLIENT_ID,         // facebook client id
-      clientSecret: process.env.FB_CLIENT_SECRET, // facebook client secret
+      clientId: 'your-facebook-client-id',        // facebook client id
+      clientSecret: 'your-facebook-client-secret',// facebook client secret
       options: {                                  // any additional params to be sent to provider
         scope: 'user_likes',
       },
